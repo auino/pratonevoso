@@ -43,6 +43,13 @@
   },
   {
     "enabled": true,
+    "title": "Prato Nevoso Eventi",
+    "handle": "Pagina Facebook · eventi",
+    "icon": "facebook",
+    "url": "https://www.facebook.com/pratonevosoeventi"
+  },
+  {
+    "enabled": true,
     "title": "Innamorati di Prato Nevoso",
     "handle": "Gruppo Facebook · community",
     "icon": "facebook",
@@ -54,6 +61,13 @@
     "handle": "Gruppo Facebook · community",
     "icon": "facebook",
     "url": "https://www.facebook.com/groups/443748836804629/"
+  },
+  {
+    "enabled": true,
+    "title": "Noi che amiamo Prato Nevoso",
+    "handle": "Gruppo Facebook · community",
+    "icon": "facebook",
+    "url": "https://www.facebook.com/groups/1079733865790854"
   },
   {
     "enabled": true,
