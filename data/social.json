@@ -29,6 +29,20 @@
   },
   {
     "enabled": true,
+    "title": "Innamorati di Prato Nevoso",
+    "handle": "Gruppo Facebook · community",
+    "icon": "facebook",
+    "url": "https://www.facebook.com/groups/487374144792069/"
+  },
+  {
+    "enabled": true,
+    "title": "Veramente innamorati di Prato Nevoso",
+    "handle": "Gruppo Facebook · community",
+    "icon": "facebook",
+    "url": "https://www.facebook.com/groups/443748836804629/"
+  },
+  {
+    "enabled": true,
     "title": "Prato Nevoso Ski TV",
     "handle": "@PRATONEVOSOSKITV",
     "icon": "youtube",
