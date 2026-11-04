@@ -171,7 +171,8 @@
     instagram: svg('<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>'),
     facebook: svg('<path d="M14 21v-8h2.5l.5-3H14V8.2c0-.9.3-1.7 1.8-1.7H17V4.1C16.6 4 15.5 4 14.3 4 11.8 4 10 5.4 10 8v2H7v3h3v8"/>'),
     telegram: svg('<path d="m21 4-3 15-6-4-3 3 .5-5L19 6 8 13l-4-1.5Z"/>'),
-    youtube: svg('<rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/>')
+    youtube: svg('<rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/>'),
+    tiktok: svg('<path d="M15.5 3.5v13a4 4 0 1 1-4-4"/><path d="M15.5 7.2c1.2 2.6 3.2 4 6 4.3"/>')
   };
 
   const weatherInfo = (code, isDay = 1) => {

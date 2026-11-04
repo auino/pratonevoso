@@ -22,6 +22,20 @@
   },
   {
     "enabled": true,
+    "title": "Hashtag — foto e video",
+    "handle": "#pratonevoso su Instagram",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/explore/tags/pratonevoso/"
+  },
+  {
+    "enabled": true,
+    "title": "TikTok — video",
+    "handle": "#pratonevoso su TikTok",
+    "icon": "tiktok",
+    "url": "https://www.tiktok.com/tag/pratonevoso"
+  },
+  {
+    "enabled": true,
     "title": "Prato Nevoso Ski",
     "handle": "PratoNevoso",
     "icon": "facebook",
