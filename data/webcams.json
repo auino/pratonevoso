@@ -42,7 +42,7 @@
     "time": null
   },
   {
-    "enabled": false,
+    "enabled": true,
     "label": "Piazza Dodero",
     "desc": "Centro del paese",
     "embed": "https://www.vigliettisport.com/webcam.jpg",
