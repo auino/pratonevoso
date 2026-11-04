@@ -1,0 +1,44 @@
+[
+  {
+    "enabled": true,
+    "title": "Prato Nevoso",
+    "handle": "@pratonevososki",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/pratonevososki/"
+  },
+  {
+    "enabled": true,
+    "title": "Mondolè Ski",
+    "handle": "@mondoleski",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/mondoleski/"
+  },
+  {
+    "enabled": true,
+    "title": "Frabosa Ski",
+    "handle": "@frabosaski",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/frabosaski/"
+  },
+  {
+    "enabled": true,
+    "title": "Prato Nevoso Ski",
+    "handle": "PratoNevoso",
+    "icon": "facebook",
+    "url": "https://www.facebook.com/PratoNevoso"
+  },
+  {
+    "enabled": true,
+    "title": "Prato Nevoso Ski TV",
+    "handle": "@PRATONEVOSOSKITV",
+    "icon": "youtube",
+    "url": "https://www.youtube.com/@PRATONEVOSOSKITV"
+  },
+  {
+    "enabled": true,
+    "title": "Prato Nevoso — canali Telegram",
+    "handle": "t.me/pratonevososki",
+    "icon": "telegram",
+    "url": "https://t.me/pratonevososki"
+  }
+]

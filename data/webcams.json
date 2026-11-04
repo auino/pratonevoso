@@ -1,0 +1,54 @@
+[
+  {
+    "enabled": true,
+    "label": "La Conca",
+    "desc": "Panoramica 360° in paese, ai piedi delle piste",
+    "embed": "https://pratonevoso.panomax.com/conca",
+    "thumb": "https://live-image.panomax.com/cams/11813/recent_reduced.jpg",
+    "thumbFallback": "https://panodata.panomax.com/cams/11813/preview_og.jpg",
+    "credit": "Prato Nevoso S.p.A.",
+    "creditUrl": "https://pratonevoso.com/inverno/live/webcam/#webcam-conca",
+    "time": null
+  },
+  {
+    "enabled": true,
+    "label": "Chalet Il Rosso",
+    "desc": "Panoramica a 2.000 m, all'arrivo di La Rossa",
+    "embed": "https://pratonevoso.panomax.com",
+    "thumb": "https://live-image.panomax.com/cams/6636/recent_reduced.jpg",
+    "thumbFallback": "https://panodata.panomax.com/cams/6636/preview_og.jpg",
+    "credit": "Prato Nevoso S.p.A.",
+    "creditUrl": "https://pratonevoso.com/inverno/live/webcam/#webcam-rosso",
+    "time": null
+  },
+  {
+    "enabled": true,
+    "label": "Malanotte — diretta video",
+    "desc": "Live stream su YouTube",
+    "embed": "https://www.youtube.com/embed/Om4oX0Djoh0?autoplay=1",
+    "thumb": "https://i.ytimg.com/vi/Om4oX0Djoh0/hqdefault.jpg",
+    "credit": "YouTube",
+    "creditUrl": "https://www.youtube.com/watch?v=Om4oX0Djoh0",
+    "time": null
+  },
+  {
+    "enabled": true,
+    "label": "La Conca — foto live",
+    "desc": "Ultimo scatto dal comprensorio",
+    "embed": "<a href=\"https://www.skylinewebcams.com/it/webcam/italia/piemonte/cuneo/frabosa-sottana-prato-nevoso.html\" target=\"_blank\" rel=\"noopener\"><img src=\"https://embed.skylinewebcams.com/img/2597.jpg\" alt=\"Prato Nevoso webcam\"></a>",
+    "thumb": "https://cdn.skylinewebcams.com/live2597.jpg",
+    "credit": "SkylineWebcams",
+    "creditUrl": "https://www.skylinewebcams.com/it/webcam/italia/piemonte/cuneo/frabosa-sottana-prato-nevoso.html",
+    "time": null
+  },
+  {
+    "enabled": false,
+    "label": "Piazza Dodero",
+    "desc": "Centro del paese",
+    "embed": "https://www.vigliettisport.com/webcam.jpg",
+    "thumb": "https://www.vigliettisport.com/webcam.jpg",
+    "credit": "Viglietti Sport",
+    "creditUrl": "https://www.vigliettisport.com/it/content/35__webcam-viglietti-sport",
+    "time": "time"
+  }
+]

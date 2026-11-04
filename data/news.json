@@ -1,0 +1,58 @@
+[
+  {
+    "enabled": true,
+    "title": "Prato Nevoso · sito ufficiale",
+    "description": "News, aperture impianti e piste, meteo e calendario degli eventi",
+    "mark": "PN",
+    "tag": "Ufficiale",
+    "url": "https://pratonevoso.com/inverno/news/"
+  },
+  {
+    "enabled": true,
+    "title": "Mondolè Ski",
+    "description": "Comprensorio sciistico: Prato Nevoso, Artesina, Frabosa Soprana",
+    "mark": "M",
+    "tag": "Comprensorio",
+    "url": "https://mondole.it/"
+  },
+  {
+    "enabled": true,
+    "title": "Frabosa Ski",
+    "description": "Attualità e condizioni del versante di Frabosa Soprana",
+    "mark": "F",
+    "tag": "News",
+    "url": "https://frabosaski.it/"
+  },
+  {
+    "enabled": true,
+    "title": "Artesina Ski",
+    "description": "Aperture, piste e webcams del versante di Artesina",
+    "mark": "A",
+    "tag": "News",
+    "url": "https://www.artesina.it/"
+  },
+  {
+    "enabled": true,
+    "title": "Snow-forecast — Prato Nevoso",
+    "description": "Previsioni dettagliate a 6 giorni e webcam",
+    "mark": "S6",
+    "tag": "Meteo",
+    "url": "https://www.snow-forecast.com/resorts/Prato-Nevoso/6day/mid"
+  },
+  {
+    "enabled": true,
+    "title": "TargaTocn",
+    "description": "Il quotidiano online della provincia di Cuneo",
+    "mark": "TC",
+    "tag": "Stampa",
+    "url": "https://www.targatocn.it/"
+  },
+  {
+    "enabled": true,
+    "title": "Prima Cuneo",
+    "description": "Notizie dal territorio cuneese",
+    "mark": "PC",
+    "tag": "Stampa",
+    "url": "https://www.primacuneo.it/"
+  }
+]
