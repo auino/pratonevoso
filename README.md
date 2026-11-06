@@ -84,7 +84,7 @@ The list lives in `data/webcams.json` and is fetched at runtime. Each entry supp
 - **`https://...jpg|png|...`** → a still image with optional cache-busting via the `time` field
 - **`<...>` raw HTML** (e.g. an image link wrapping the webcam) → injected into the modal
 
-Entries with `"enabled": false` are hidden. Each webcam is also reachable via a deep link you can share: `index.html#webcam-0`, `index.html#webcam-1`, … (matching its position in the filtered list). Thumbnails are refreshed every 5 minutes with a cache-busting parameter; if a thumbnail fails to load, the entry's `thumbFallback` (or a camera placeholder) is shown.
+Entries with `"enabled": false` are hidden. Each webcam is also reachable via a deep link you can share: `index.html#webcam-0`, `index.html#webcam-1`, … (matching its position in the filtered list). Thumbnails and weather data are refreshed dynamically about every minute while the page is visible, and immediately when the page regains focus (e.g. after reopening the iOS home-screen "app"); the cache-busting parameter bypasses browser and thumbnail caches. If a thumbnail fails to load, the entry's `thumbFallback` (or a camera placeholder) is shown.
 
 ```json
 {

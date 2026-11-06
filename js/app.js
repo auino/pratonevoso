@@ -26,7 +26,8 @@
     webcams: [],
     lastFocus: null,
     frameTimer: null,
-    loadingWeather: false
+    loadingWeather: false,
+    lastWeatherFetch: null
   };
 
   /* ── Small helpers ─────────────────────────────────────── */
@@ -51,10 +52,10 @@
     return `${url}${separator}${encodeURIComponent(param)}=${Date.now()}`;
   };
 
-  const withThumbBuster = (url) => {
+  const withThumbBuster = (url, forced = null) => {
     if (!url) return url;
     const separator = url.includes('?') ? '&' : '?';
-    return `${url}${separator}t=${Math.floor(Date.now() / 300000)}`;
+    return `${url}${separator}t=${forced ?? Math.floor(Date.now() / 300000)}`;
   };
 
   const round = (value) => {
@@ -281,6 +282,7 @@
       const data = await response.json();
       if (!data || !data.current || !data.daily) throw new Error('Invalid weather payload');
       state.weather = data;
+      state.lastWeatherFetch = Date.now();
       writeCache(data);
       renderWeather(data, { cached: false });
     } catch (error) {
@@ -474,6 +476,39 @@
     if (hourly) hourly.innerHTML = '';
   };
 
+  /* ── Periodic refresh & return-to-foreground ──────────── */
+  // Weather and thumbnails refresh dynamically about every minute while
+  // the page is open, and immediately when the page regains visibility
+  // (e.g. reopening the iOS home-screen "app").
+  const REFRESH_INTERVAL = 60 * 1000; // 1 minute
+
+  const refreshThumbs = () => {
+    if (document.visibilityState !== 'visible') return;
+    $$('#webcamGrid .cam-media img').forEach((image) => {
+      const base = image.dataset.thumb;
+      if (!base) return;
+      if (image.closest('.cam-media')?.classList.contains('is-missing')) return;
+      image.src = withThumbBuster(base, Date.now());
+    });
+  };
+
+  const refreshContent = () => {
+    if (document.visibilityState !== 'visible') return;
+    if (!state.lastWeatherFetch || Date.now() - state.lastWeatherFetch >= REFRESH_INTERVAL) {
+      loadWeather(true);
+    }
+    refreshThumbs();
+  };
+
+  const initAutorefresh = () => {
+    setInterval(refreshContent, REFRESH_INTERVAL);
+    document.addEventListener('visibilitychange', () => {
+      // Firing on foreground: coming back to the app / tab.
+      if (document.visibilityState === 'visible') refreshContent();
+    });
+    window.addEventListener('focus', () => refreshContent());
+  };
+
   /* ── Webcams ───────────────────────────────────────────── */
   const fetchJson = async (url) => {
     const response = await fetch(url, { cache: 'no-store' });
@@ -513,7 +548,7 @@
         : '';
       return `<article class="cam" data-index="${index}">
         <div class="cam-media">
-          ${thumb ? `<img src="${escapeHtml(thumb)}" alt="Anteprima della webcam ${escapeHtml(webcam.label || '')}" loading="lazy" referrerpolicy="no-referrer" data-fallback="${escapeHtml(fallback)}">` : ''}
+          ${thumb ? `<img src="${escapeHtml(thumb)}" data-thumb="${escapeHtml(webcam.thumb)}" alt="Anteprima della webcam ${escapeHtml(webcam.label || '')}" loading="lazy" referrerpolicy="no-referrer" data-fallback="${escapeHtml(fallback)}">` : ''}
           <div class="cam-fallback" aria-hidden="true">${ICONS.camera}<span>Anteprima non disponibile</span></div>
           <span class="cam-live"><span class="live-dot"></span>Live</span>
           <span class="cam-open" aria-hidden="true">${ICONS.expand}</span>
@@ -890,6 +925,7 @@
     initModal();
     initWebcamGrid();
     initRetry();
+    initAutorefresh();
 
     $('#refreshWeather')?.addEventListener('click', () => loadWeather(true));
 
